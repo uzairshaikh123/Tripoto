@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+          background: url("https://c4.wallpaperflare.com/wallpaper/814/350/568/spa-beach-hotel-infinity-pool-wallpaper-preview.jpg"); 
+           background-size: cover;
+        }
+        .cont{
+            
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .cont>div{
+            
+            width: 30%;
+            height: 400px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(71, 70, 70);
+        opacity: 80%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        
+        }
+        .cont>div>form>input{
+        height: 30px;
+        width: 400px;
+        }
+        h1{
+            font-size: 40px;
+           text-align: center;
+           color: rgb(249, 244, 244);
+           background: rgb(16, 16, 16);
+           
+           
+        }
+        #submit{
+            color: white;
+            background-color: blue;
+            border: none;
+            height: 30px;
+            width: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        
+        form>label{
+            color: white;
+            font-size: 20px;
+           font-weight: 500;
+        }
+            </style>
+</head>
+<body>
+    <h1>Signin Page</h1>
+    <div class="cont">
+    
+    <div>
+    
+    <form action="">
+    
+    
+    <label for="">
+        Email
+    </label><br>
+    <input type="email" name="email" id="email"placeholder="Enter email" ><br>
+    
+    <label for="">
+        Password
+    </label><br>
+    <input type="password" name="password" id="password"   placeholder=" Enter password"  ><br>
+    
+    <button type="submit" name="submit" id="submit"  placeholder="submit"   >Signin</button><br>
+<button id="sign">signup</button>
+    
+    
+    </form>
+   
+    </div>
+   
+    
+    
+    
+    
+    </div>
+    
+</body>
+</html>
+<script>
+
+
+let data=JSON.parse(localStorage.getItem("signup"))
+console.log(data)
+
+document.querySelector("form").addEventListener("submit",function(event){
+    
+event.preventDefault()
+let email=document.querySelector("#email").value
+let password=document.querySelector("#password").value
+if(email=="" || password==""){
+    
+
+    alert("please fill the details")
+    return
+}
+let flag=false
+for (let i = 0; i < data.length; i++) {
+   
+    
+
+if(email==data[i].email && password==data[i].password){
+   flag=true;
+   break;
+       
+
+    }
+
+
+
+}
+
+if(flag==true){
+    alert("Signin Successful")
+      window.location.replace("loginhomepage.html")
+}else{
+  
+
+    alert("Wrong Credentials")
+}
+})
+document.querySelector("#sign").addEventListener("click",function(){
+
+
+window.location.replace("loginhomepage.html")
+})
+</script>

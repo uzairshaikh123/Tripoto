@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+  background: url("https://c4.wallpaperflare.com/wallpaper/814/350/568/spa-beach-hotel-infinity-pool-wallpaper-preview.jpg"); 
+   background-size: cover;
+}
+.cont{
+    
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.cont>div{
+    
+    width: 30%;
+    height: 400px;
+margin: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgb(71, 70, 70);
+opacity: 80%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.cont>div>form>input{
+height: 30px;
+width: 400px;
+}
+h1{
+    font-size: 40px;
+   text-align: center;
+   color: rgb(249, 244, 244);
+   background: rgb(16, 16, 16);
+   
+   
+}
+#submit{
+    color: white;
+    background-color: blue;
+    border: none;
+    height: 30px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+form>label{
+    color: white;
+    font-size: 20px;
+   font-weight: 500;
+}
+    </style>
+</head>
+<body>
+    
+    <h1> Signup Page </h1>
+<div class="cont">
+
+<div>
+
+<form action="">
+
+<label for="">
+    Name
+</label><br>
+<input type="text" name="name" id="name" placeholder="Enter name" ><br>
+<label for="">
+    Email
+</label><br>
+<input type="email" name="email" id="email"placeholder="Enter email" ><br>
+<label for="">
+    Phone no.
+</label><br>
+<input type="phone" name="phone" id="phone"placeholder=" Enter Phone no." ><br>
+<label for="">
+    Password
+</label><br>
+<input type="password" name="password" id="password"   placeholder=" Enter password"  ><br>
+
+<button type="submit" name="submit" id="submit"  placeholder="submit"   >Signup</button><br>
+
+
+
+</form><br>
+
+</div>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
+<script>
+
+document.querySelector("form").addEventListener("submit",myfun)
+
+
+function myfun(event){
+
+event.preventDefault()
+
+let arr=JSON.parse(localStorage.getItem("signup"))||[]
+let name=document.querySelector("#name").value
+
+let email=document.querySelector("#email").value
+
+let password=document.querySelector("#password").value
+
+let phone=document.querySelector("#phone").value
+let obj={
+
+    name,email,password,phone
+}
+if(obj.name=="" || obj.email=="" || obj.password=="" || obj.phone==""){
+    alert("Please fill all the details")
+}else{
+    arr.push(obj)
+    alert("signup successful")
+localStorage.setItem("signup",JSON.stringify(arr))
+window.location.replace("signin.html")
+}
+
+
+}
+document.querySelector("submit").addEventListener("submit",myfun)
+
+
+</script>
