@@ -1163,28 +1163,152 @@ div1.append(img)
 
 document.querySelector(".bottomlast").append(div1)
 
-   
+let count=0
   for(i=0;i<=3;i++){
     
     let div=document.createElement("div")
-    for(j=0;j<6;j++){
+    for(j=0;j<=8;j++){
      
   let p=document.createElement("p")
   div.append(p)
-  p.innerText="How It Works"
+  if(i==0 && j==0){
+
+  }
+p.innerText="About Tripoto"
+if(i==0 && j==1){
+  p.innerText="How it works"
 }
+if(i==0&& j==2){
+  p.innerText="FAQ's"
+}
+if(i==0 && j==3){
+  p.innerText="Privacy Policy"
+}
+if(i==0 && j==4){
+  p.innerText="Terms and condition"
+}
+if(i==0 && j==5){
+  p.innerText="contact us"
+}
+if(i==0 && j==6){
+  p.innerText="carrrer"
+}
+  
+  if(i==1 && j==0){
+    p.innerText="Products"
+  }
+  
+  
+
+
+
+
+  if(i==2 && j==0){
+    p.innerText="Important Travel links"
+  }
+  
+
+if(i==1 && j==1){
+p.innerText="Tour Packages"
+}
+if(i==1&& j==2){
+p.innerText="Travel Guides"
+}
+if(i==1 && j==3){
+p.innerText="Trips & Itineraries"
+}
+if(i==1 && j==4){
+p.innerText="Weekend Getaways"
+}
+if(i==1 && j==5){
+p.innerText="Places to Visit"
+}
+if(i==1 && j==6){
+p.innerText="Other Travel Categories"
+}
+if(i==0&&j==7){
+  p.innerText="Tripoto Forum"
+}
+if(i==0&&j==8){
+  p.innerText="Honeymoon Packages"
+}
+
+
+
+if(i==3 && j==0){
+    p.innerText="Partner Programs"
+  }
+
+
+if(i==2 && j==1){
+p.innerText="Goa Tourism"
+}
+if(i==2&& j==2){
+p.innerText="Dubai Tourism"
+}
+if(i==2 && j==3){
+p.innerText="Singapore Tourism"
+}
+if(i==2 && j==4){
+p.innerText="Kerala Tourism"
+}
+if(i==2 && j==5){
+p.innerText="Manali Tourism"
+}
+if(i==2 && j==6){
+p.innerText="Bali Tourism"
+}
+if(i==2&&j==7){
+  p.innerText="Bali Tourism"
+}
+if(i==2&&j==8){
+  p.innerText="Honeymoon Destinations In India"
+
+
+
+
+  
+}
+
+
+
+
+if(i==3 && j==1){
+p.innerText="Buy Travel Leads"
+}
+if(i==3&& j==2){
+p.innerText="Partner With Us"
+}
+if(i==3 && j==3){
+p.innerText="Earn Credits"
+}
+if(i==3 && j==4){
+p.innerText="Get Paid To Travel"
+}
+if(i==3 && j==5){
+p.innerText="Import Blog To Itinerary"
+}
+
+
+
+
+  
+
+
+
+
+
     document.querySelector(".bottomlast").append(div)
     
   }
 
 
 
-
+  }
 
 }
-let div1=document.querySelector("#div1")
-
 bottomlast()
-document.querySelector("#div1>img").src="https://cdn1.tripoto.com/assets/2.9/img/logo/header-blue.svg"
-div1.innerText="India's Largest Travel Community"
+
+
+
 </script>
