@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+
+        * {
+            line-height: 40px;
+
+        }
+
+        .bottomlast {
+            width: 100%;
+            height: 300px;
+            border: 2px solid rgb(240, 240, 240);
+            display: flex;
+            margin-top: 40px;
+            justify-content: space-evenly;
+
+        }
+
+        .bottomlast>div>p:nth-child(1) {
+            font-size: 20px;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+
+        #div1 {
+
+            width: 20%;
+            height: 300px;
+
+
+        }
+
+        #div1>img:nth-child(1) {
+
+            margin-top: 50px;
+        }
+
+        #div1:nth-child(2) {
+            font-size: 20px;
+            font-family: sans-serif;
+            color: black;
+            font-style: underline;
+        }
+
+        .nav {
+
+
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 80px;
+            background: #2f9bdb;
+            display: flex;
+        }
+
+        .nav>div {
+            width: 50%;
+            border: 2px solid red;
+            display: flex;
+            height: auto;
+
+        }
+
+        .nav>div:nth-child(1) {
+            width: 50%;
+            border: 2px solid rgb(0, 255, 136);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #search {
+            height: 40px;
+            width: 400px;
+
+        }
+
+        #nav-end>div>div {
+            border: 1px solid red;
+           
+
+        }
+
+       
+
+        .mid {
+            border: 1px solid red;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .mid>div {
+
+
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+
+        }
+
+        .mid>div>div:nth-child(1) {
+
+            width: 70%;
+            background: white;
+
+
+        }
+
+        .mid>div>div:nth-child(2) {
+            width: 30%;
+            background: rgb(147, 147, 147);
+          
+            height: 500px;
+            margin-left: 30px;
+            opacity: 90%;
+
+
+        }
+
+        #first {
+            display: inline-block;
+            height: auto;
+        }
+
+        #sec {
+            position: sticky;
+            top: 140px;
+        }
+
+        #first>img {
+            width: 100%;
+            height: 400px;
+        }
+
+        #first>:nth-child(3) {
+            display: inline;
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            object-position: center;
+            margin-top: 20px;
+        }
+
+        #first>:nth-child(4) {
+            font-size: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+
+        #first>:nth-child(5) {
+            display: inline;
+            margin-left: 340px;
+            font-size: 20px;
+            font-weight: 600;
+
+        }
+
+        #first>:nth-child(5):hover {
+            color: green;
+
+        }
+
+        #first>:nth-child(7) {
+            display: inline-block;
+            background: teal;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        #first>:nth-child(9) {
+            background: teal;
+            color: white;
+
+        }
+
+        #first>:nth-child(10) {
+
+            width: 25px;
+            height: 25px;
+            margin-top: 20px;
+
+        }
+
+        #first>:nth-child(11) {
+            display: inline;
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(12) {
+
+            width: 25px;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(13) {
+            display: inline;
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(14) {
+
+            width: 25px;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(15) {
+            display: inline;
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(16) {
+
+            width: 25px;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(17) {
+            display: inline;
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(18) {
+
+            width: 25px;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(19) {
+            display: inline;
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(20) {
+
+            width: 25px;
+            height: 25px;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        #first>:nth-child(21) {
+            display: inline;
+            font-size: 20px;
+            margin-left: 20px;
+
+        }
+
+        .bottomlast>div>p {
+
+            line-height: 30px;
+
+
+        }
+
+        #sec>div>form>input {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #sec {
+            height: auto;
+            text-align: center;
+        }
+
+        #sec>div>form>select {
+            width: 100%;
+            height: 30px;
+        }
+
+        #next {
+            color: white;
+            background: blue;
+            height: 40px;
+            width: 200px;
+            font-size: 20px;
+        }
+#submit{
+    color: solid red;
+
+
+
+}
+        @media all and (min-width:0px) and (max-width:1023px) {
+
+            .bottomlast {
+                flex-direction: column;
+                margin-top: 700px;
+            }
+
+            @media all and (min-width:299px) and (max-width:599px) {
+               
+
+            }
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="nav">
+
+        <div>
+            <img id="logo" src="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg">
+            
+
+        </div>
+
+        <div id="nav-end">
+            <div>
+
+
+                
+
+              
+
+
+
+             <p id="p" style="margin-left:600px"> 
+                <a href="signin.html"><button id="submit">Signin</button></a>
+            
+            </p>
+               
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="mid">
+
+        <div>
+            <div id="first"></div>
+            <div id="sec">
+                <div>
+                    <h1>Enter Your Details and Proceed To Book</h1>
+                    <form action="">
+
+                        <input type="text" name="" id="name" placeholder=" Full Name"><br>
+                        <input type="email" name="" id="name" placeholder="Email"><br>
+                        <input type="phone" name="" id="phone" placeholder="Phone no.">
+                        <br>
+                        <input type="text" name="" id="Departure" placeholder="Departure city"><br>
+
+
+                        <input type="num" name="" id="adult" placeholder="Adults" maxlength="2"><br>
+                        <input type="num" name="" id="children" placeholder="children 6 to 9yrs"><br>
+                        <select name="" id="">
+
+                            <option value="">Private room x1
+
+
+
+                            </option>
+                            <option value="">Dorm bed x1
+
+
+
+                            </option>
+                        </select><br>
+                        <input type="date" name="" id="date" placeholder="Check in date"><br>
+                        <input type="checkbox" name="" id="check">
+                        <label for="">Send me the updates on Whatsapp</label><br>
+                        <label for="">Amount:</label>
+                        <label for="">6000</label><br>
+                        <label for="">Taxes and discounts are calculated at checkout.</label><br>
+
+
+                        <button id="next">Next</button><br>
+                        <label for="">I accept the Terms of Use and Privacy Policy of Tripoto.</label><br>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="three"></div>
+
+
+
+
+    </div>
+
+    <div class="bottomlast">
+
+    </div>
+    <p id="res" style="text-align: center ;margin-top:20px">
+        @All right reserved
+    </p>
+
+
+</body>
+
+</html>
+
+
+<script>
+
+    let data = JSON.parse(localStorage.getItem("book-details"))
+
+
+    bookpage(data)
+
+
+    function bookpage(data) {
+        console.log(data[0].img)
+        let img = document.createElement("img")
+        img.src = data[0].img
+
+
+
+        let div = document.createElement("div")
+
+        let h1 = document.createElement("h1")
+        h1.innerText = "Explore Auroville Like a Local on a Bicycle As You Stay On a Rustic Farm | Beyond Community"
+
+        let logo = document.createElement("img")
+        logo.src = "https://cdn1.tripoto.com/media/filter/mss/img/2165009/UserPhoto/1628574904_tripoto_s_mindful_retreats.jpg"
+        logo.style.width = "30px"
+        logo.style.height = "30px"
+        logo.style.borderRadius = "80%"
+        let p = document.createElement("p")
+        p.innerText = "Tripoto Mindfull Retraits"
+
+        let num = document.createElement("p")
+        num.innerText = "📞08046162990"
+
+        let p2 = document.createElement("p")
+        p.innerText = "Ratings: 5.0"
+
+        let p3 = document.createElement("p")
+        p3.innerText = "3 Days 2 Night"
+
+        let p4 = document.createElement("p")
+        p4.innerText = "Location:Auroville"
+
+        let h3 = document.createElement("h3")
+        h3.innerText = "Highlights"
+
+        let img3 = document.createElement("img")
+        img3.src = "https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1555425505_meals.png"
+
+
+        let p5 = document.createElement("p")
+        p5.innerText = "Meals"
+        let img4 = document.createElement("img")
+
+        img4.src = "https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1555425506_breakfast.png"
+
+        let p6 = document.createElement("p")
+        p6.innerText = "Daily Breakfast"
+
+        let img5 = document.createElement("img")
+
+        img5.src = "https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1555425508_sightseeing.png"
+        let p7 = document.createElement("p")
+
+        p7.innerText = "Sightseeing"
+        let img6 = document.createElement("img")
+
+        img6.src = "https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1555425508_camp.png"
+        let p8 = document.createElement("p")
+
+        p8.innerText = "Camp"
+        let img7 = document.createElement("img")
+
+        img7.src = "https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1592388015_adventure.png"
+        let p9 = document.createElement("p")
+
+        p9.innerText = "Adventure"
+        let img8 = document.createElement("img")
+
+        img8.src = "https://cdn1.tripoto.com/media/filter/tst/img/2/Image/1592388052_nature.png"
+        let p10 = document.createElement("p")
+
+        p10.innerText = "Nature"
+
+        let p11 = document.createElement("p")
+        p11.innerText = "Overview"
+        p11.style.fontSize = "40px"
+        let p12 = document.createElement("p")
+
+        p12.innerText = "Feel like stepping away from the urban cacophony, to unwind amidst nature? Embrace the gorgeous blue skies and the soothing green fields at Tripoto’s Mindful Retreat in Auroville, where you can live peacefully and vibe with nature at its best. Set in the outskirts of Pondicherry, explore this experimental township like never before, as you glamp amidst greenery, go cycling around town to explore spots like the Spirulina farm, Svaram sound garden, and the popular Matrimandir. Spend your mornings working at the organic farm farm animals (3 dogs and 18 cats to be precise!), and learn Kalaripayattu, a century-old martial art form. Join us for Tripoto's first Mindful Retreat in South India, and get a chance to uncover a minimalistic and spiritual way of life."
+        let h = document.createElement("h3")
+        h.innerText = "The retreat comes with a free one-time rescheduling option. Let us know 72 hours ahead of the stay and pick another date as per your convenience within the next three months"
+
+
+        let p13 = document.createElement("p")
+        p13.innerText = "*" + "Living in cozy tents with modern amenities amidst an organic farm."
+        let p14 = document.createElement("p")
+        p14.innerText = "*" + "Exploring the town on a bicycle tour and visiting gems like Spirulina farm, Svaram Sound Garden, and Matrimandir. "
+        let p15 = document.createElement("p")
+        p15.innerText = "*" + "Discovering India’s unique experimental township– Auroville that aims to create a “universal town where men and women of all countries are able to live in peace and progressive harmony above all creeds, all politics and all nationalities.”"
+        let h2 = document.createElement("h3")
+        h2.innerText = "Where you'll stay:"
+        let p16 = document.createElement("p")
+
+        p16.innerText = "Settle yourself in a glamping tent (double sharing) or take a spot in the dorm (one bed) to connect with fellow travellers."
+        let p17 = document.createElement("p")
+
+        p17.innerText = "*" + "Get a chance to volunteer at the organic farm and embrace the bliss of minimalistic living."
+
+        let h4 = document.createElement("h3")
+        h4.innerText = "*" + "At the retreat you will experience:"
+
+
+        let h5 = document.createElement("h1")
+        h5.innerText = "Itinerary"
+
+
+        let h6 = document.createElement("h2")
+        h6.innerText = "Day-1"
+
+        let p18 = document.createElement("p")
+
+        p18.innerText = "Check-in at around noon, and take a walk exploring this nature friendly retreat."
+        let p19 = document.createElement("p")
+
+        p19.innerText = "Attend an exciting session on Kalaripayattu and burn away the holiday calories (Timings: Mon-Fri 4pm & Sat-Sun 7am)"
+
+
+        let p20 = document.createElement("p")
+
+        p20.innerText = "Enjoy a hot and delicious dinner with a side of starry skies."
+        let h7 = document.createElement("h2")
+        h7.innerText = "Day-2"
+
+        let p21 = document.createElement("p")
+
+        p21.innerText = "06:30 am: Wake up to the chirping of birds and volunteer at an organic farm"
+
+        let p22 = document.createElement("p")
+
+        p22.innerText = "It's time to explore Auroville like never before! Go cycling around the property and hit the rustic trails of Spirulina farm, Svaram sound garden and Matrimandir."
+
+        let p23 = document.createElement("p")
+
+        p23.innerText = "Connect with fellow travelers, explore the town’s many cafes and of course, enjoy a delicious lunch at the property."
+
+        let p24 = document.createElement("p")
+
+        p24.innerText = "Stargaze from your tent, enjoy a musical night and feel the bliss."
+
+        let h8 = document.createElement("h2")
+        h8.innerText = "Day-3"
+
+        let p25 = document.createElement("p")
+
+        p25.innerText = "Enjoy your breakfast,"
+
+        let p26 = document.createElement("p")
+
+        p26.innerText = "Share warm hugs with the hosts and bid goodbye to this beautiful retreat."
+        let h9 = document.createElement("h2")
+        h9.innerText = "Inclusions"
+
+        let p27 = document.createElement("p")
+
+
+        p27.innerText = "Two breakfasts at the retreat."
+
+        let p28 = document.createElement("p")
+
+
+        p27.innerText = "Two lunches at the retreat"
+
+        let p29 = document.createElement("p")
+
+
+        p29.innerText = "Two dinners at the retreat."
+
+        document.querySelector("#first")
+            .append(img, h1, logo, p, num, p2, p3, p4, h3, img3, p5, img4, p6, img5, p7, img6, p8, img7, p9, img8, p10, p11, p12, h
+                , p13, p14, p15, h2, p16, p17, h4, h5, h6, p18, p19, p20, h7, p21, p22, p23, p24, h8, p25, p26)
+    }
+
+
+    function bottomlast() {
+
+
+        let div1 = document.createElement("div")
+        div1.setAttribute("id", "div1")
+
+        let img = document.createElement("img")
+        img.src = "https://cdn1.tripoto.com/assets/2.9/img/logo/header-blue.svg"
+        let img2 = document.createElement("img")
+        img2.src = "https://cdn1.tripoto.com/assets/2.9/img/logo/download-android-app.svg"
+        let img3 = document.createElement("img")
+        img3.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5X6yHvbuDp2czaPgtsUMGE91JIzfjQ8Ug2w&usqp=CAU"
+        div1.append(img)
+        let p = document.createElement("p")
+        p.innerText = "India's Largest Travel Community"
+        div1.append(p)
+        img3.style.width = "200px"
+        img3.style.height = "40px"
+        div1.append(img3)
+        div1.append(img2)
+        document.querySelector(".bottomlast").append(div1)
+
+        let count = 0
+        for (i = 0; i <= 3; i++) {
+
+            let div = document.createElement("div")
+            for (j = 0; j <= 8; j++) {
+
+                let p = document.createElement("p")
+                div.append(p)
+                if (i == 0 && j == 0) {
+
+                }
+                p.innerText = "About Tripoto"
+                if (i == 0 && j == 1) {
+                    p.innerText = "How it works"
+                }
+                if (i == 0 && j == 2) {
+                    p.innerText = "FAQ's"
+                }
+                if (i == 0 && j == 3) {
+                    p.innerText = "Privacy Policy"
+                }
+                if (i == 0 && j == 4) {
+                    p.innerText = "Terms and condition"
+                }
+                if (i == 0 && j == 5) {
+                    p.innerText = "contact us"
+                }
+                if (i == 0 && j == 6) {
+                    p.innerText = "carrrer"
+                }
+
+                if (i == 1 && j == 0) {
+                    p.innerText = "Products"
+                }
+
+
+
+
+
+
+                if (i == 2 && j == 0) {
+                    p.innerText = "Important Travel links"
+                }
+
+
+                if (i == 1 && j == 1) {
+                    p.innerText = "Tour Packages"
+                }
+                if (i == 1 && j == 2) {
+                    p.innerText = "Travel Guides"
+                }
+                if (i == 1 && j == 3) {
+                    p.innerText = "Trips & Itineraries"
+                }
+                if (i == 1 && j == 4) {
+                    p.innerText = "Weekend Getaways"
+                }
+                if (i == 1 && j == 5) {
+                    p.innerText = "Places to Visit"
+                }
+                if (i == 1 && j == 6) {
+                    p.innerText = "Other Travel Categories"
+                }
+                if (i == 0 && j == 7) {
+                    p.innerText = "Tripoto Forum"
+                }
+                if (i == 0 && j == 8) {
+                    p.innerText = "Honeymoon Packages"
+                }
+
+
+
+                if (i == 3 && j == 0) {
+                    p.innerText = "Partner Programs"
+                }
+
+
+                if (i == 2 && j == 1) {
+                    p.innerText = "Goa Tourism"
+                }
+                if (i == 2 && j == 2) {
+                    p.innerText = "Dubai Tourism"
+                }
+                if (i == 2 && j == 3) {
+                    p.innerText = "Singapore Tourism"
+                }
+                if (i == 2 && j == 4) {
+                    p.innerText = "Kerala Tourism"
+                }
+                if (i == 2 && j == 5) {
+                    p.innerText = "Manali Tourism"
+                }
+                if (i == 2 && j == 6) {
+                    p.innerText = "Bali Tourism"
+                }
+                if (i == 2 && j == 7) {
+                    p.innerText = "Bali Tourism"
+                }
+                if (i == 2 && j == 8) {
+                    p.innerText = "Honeymoon Destinations In India"
+
+
+
+
+
+                }
+
+
+
+
+                if (i == 3 && j == 1) {
+                    p.innerText = "Buy Travel Leads"
+                }
+                if (i == 3 && j == 2) {
+                    p.innerText = "Partner With Us"
+                }
+                if (i == 3 && j == 3) {
+                    p.innerText = "Earn Credits"
+                }
+                if (i == 3 && j == 4) {
+                    p.innerText = "Get Paid To Travel"
+                }
+                if (i == 3 && j == 5) {
+                    p.innerText = "Import Blog To Itinerary"
+                }
+
+
+
+
+
+
+
+
+
+
+                document.querySelector(".bottomlast").append(div)
+
+            }
+
+
+
+        }
+
+    }
+    bottomlast()
+
+
+
+</script>
