@@ -149,18 +149,20 @@
     }
 
     .lowmid {
-      border: 5px solid red;
+      border: 5px solid rgb(0, 12, 244);
       margin-top: 30px;
       width: 100%;
-
+      height:auto;
+     
     }
 
     .inside-low {
       border: 3px solid gray;
       width: 80%;
-      height: 400px;
+     
       margin: auto;
       display: flex;
+      height: auto;
     }
 
     .inside-low>div {
@@ -566,6 +568,8 @@ font-style:underline;
       display: flex;
       flex-direction: column;
       margin-top: 50px;
+      height: 200px;
+     
      
   }
   #inner-mid {
@@ -574,12 +578,23 @@ font-style:underline;
   .inner-cards {
     grid-template-columns: repeat(2,1fr);
   }
+  input {
+      height: 20px;
+      width:200px;
+    }
+    .inside-low{
+      flex-direction: column;
+
+    }
+    .inner-mid {
+    flex-direction: column;
+  }
 }
 @media all and (min-width:199px) and (max-width:599px){
   .inner-cards {
     grid-template-columns: repeat(1,1fr);
   }
-  #inner-mid {
+  .inside-low{
     flex-direction: column;
   }
   
@@ -589,7 +604,7 @@ font-style:underline;
 
 <body>
   <div class="cont">
-   <div class="navbar">
+  
     <div id="hello">
      
       <img src="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg" alt="">
@@ -636,7 +651,7 @@ font-style:underline;
       </select>
     
    
-  </div>
+
 
 </div>
     <img width="100%" height="100%" id="img" src="https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg" alt="">
@@ -677,9 +692,10 @@ font-style:underline;
 
 
   </div>
+ 
   <div class="lowmid">
+    
     <h1>In the Spotlight: Partnerships</h1>
-
     <div class="inside-low">
 
 
@@ -1164,12 +1180,13 @@ font-style:underline;
     ]
 
     count2 = 0
-
-    for (let i = 26; i < 29; i++) {
+        
+    for (let i = 26; i < 32; i++) {
 
       let div = document.createElement("div")
       let img = document.createElement("img")
       img.src = arr8[count2]
+      
       count2++
       let name = document.createElement("h3")
       name.innerText = arr[i].name
@@ -1180,12 +1197,115 @@ font-style:underline;
       price.innerText = arr[i].price + "/person"
       let but = document.createElement("button")
       but.innerText = "Book Now"
+      but.addEventListener("click",function(){
+
+booknow(arr[i])
+
+
+})
 
       div.append(img, title, name, price, but)
       document.querySelector(".bottom>div").append(div)
     }
 
   }
+
+
+
+
+
+
+
+function booknow(arr){
+
+  let img = [
+
+"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660666126_image_covera.jpg",
+"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1660316705_image_cover_1.jpg",
+"https://cdn1.tripoto.com/media/filter/tst/img/2163002/Image/1638778652_image_cover_b.jpg",
+"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1653391344_ln_c1.jpg",
+"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1654504108_ce_c1.jpg",
+"https://cdn1.tripoto.com/media/filter/tst/img/2176903/Image/1645772836_image_cover.jpg",
+
+]
+let arr2=[]
+let obj={
+  name,img,"cost":null
+}
+
+
+if(arr.name=="Rockwall"){
+  obj.name=arr.name
+  obj.img=img[0]
+  obj.cost=arr.price
+  arr2.push(obj)
+  
+ localStorage.setItem("book-details",JSON.stringify(arr2))
+}else if(arr.name=="Olathe"){
+  obj.name=arr.name
+  obj.img=img[1]
+  obj.cost=arr.price
+  arr2.push(obj)
+  
+ localStorage.setItem("book-details",JSON.stringify(arr2))
+  console.log(img[2])
+}else if(arr.name=="La Habra"){
+  obj.name=arr.name
+  obj.img=img[2]
+  obj.cost=arr.price
+  arr2.push(obj)
+ 
+ localStorage.setItem("book-details",JSON.stringify(arr2))
+
+ 
+  
+
+}else if(arr.name=="Longview"){
+  obj.name=arr.name
+  obj.img=img[3]
+  obj.cost=arr.price
+  arr2.push(obj)
+  console.log(arr2)
+ localStorage.setItem("book-details",JSON.stringify(arr2))
+ 
+}
+else if(arr.name=="South Whittier"){
+  obj.name=arr.name
+  obj.img=img[4]
+  obj.cost=arr.price
+  arr2.push(obj)
+  console.log(arr2)
+ localStorage.setItem("book-details",JSON.stringify(arr2))
+  
+}else if(arr.name=="Topeka")
+{
+  obj.name=arr.name
+  obj.img=img[5]
+  obj.cost=arr.price
+  arr2.push(obj)
+  console.log(arr2)
+ localStorage.setItem("book-details",JSON.stringify(arr2))
+ 
+
+}
+
+
+
+window.location.href="servicepage.html"
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
