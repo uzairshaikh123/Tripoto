@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonepe</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        button {
+            font: 20px;
+        }
+        .cont{
+            border: 1px solid white;
+            height: auto;
+            width: 30%;
+            margin: auto;
+        }
+        .cont>h1{
+            text-align: center;
+            font-size: 30px;
+            color: blue;
+            font-family: sans-serif;
+
+        }
+        #p{
+text-align: center;
+color: red;
+font-size: 30px;
+        }
+        .cont>img{
+            display: block;
+            margin: auto;
+            text-align: center;
+            width: 100%;
+            height: auto;
+
+        }
+        input{
+            text-align: center;
+            display: block;
+            margin: auto;
+            height: 20px;
+            width: 200px;
+        }
+        button{
+            text-align: center;
+            display: block;
+            margin: auto;
+            color: white;
+            background: blue;
+            border: none;
+            height: 20px;
+            width: 150px;
+            margin-top: 20px;
+        }
+
+        #nav>img{
+            width: 10%;
+            height: 100%;
+        }
+        #nav{
+            background: rgb(0, 13, 255);
+        
+        }
+        #h1{
+            font-size: 30px;
+            color: black;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        #nav>h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+       <h1>Otp Validation Page</h1>
+    </div>
+    
+    <p id="p">Enter otp</p>
+<input type="num" id="otp" maxlength="4">
+    <button id="sub">Submit</button>
+    
+   
+<div class="cont">
+    <h1 id="status"></h1>
+    <img id="img">
+
+
+ 
+
+<p id="pid"></p>
+
+</div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+
+//alert("otp is"+":"+1234)
+    function payment() {
+
+       
+            let promise = new Promise(function (res, rej) {
+
+            })
+           document.querySelector("#status").innerText="Pending"
+           document.querySelector("#img").src="https://media.tenor.com/ZFuJwjZcLyAAAAAM/polytoria-pending-review.gif"
+           
+        
+
+
+
+
+    }
+
+    function success() {
+        let otp2=document.getElementById("otp").value
+let v=JSON.parse(localStorage.getItem("OTP"))
+        let promise2 = new Promise(function (res, rej) {
+
+            if (otp2 == v) {
+                res("success")
+               
+
+            } else {
+                rej("failed")
+            }
+
+
+
+
+        })
+        promise2.then((res) =>{
+
+            document.querySelector("#status").innerText=res
+            document.querySelector("#img").src="https://assets.materialup.com/uploads/9ba2d687-d7d3-4361-8aee-7b2a3c074761/preview.gif"
+            
+            setTimeout(redirect,4000)
+           
+            
+
+        }).catch(function(rej){
+            document.querySelector("#status").innerText=rej
+            document.querySelector("#img").src="https://cdn.dribbble.com/users/34292/screenshots/5371308/expiredfailedpaymentvdrib.gif"
+        })
+    }
+
+    let sub = document.querySelector("#sub")
+    sub.addEventListener("click", function () {
+        stop()
+        let otp2=document.getElementById("otp").value
+        if(otp2==""){
+            alert("Your transaction will be failed please enter otp again")
+        }
+
+       
+     setTimeout(suc, 5000)
+
+        
+    })
+
+
+    function stop(promise) {
+        setTimeout(payment, 0)
+
+    }
+    function suc() {
+
+        success()
+      
+
+        
+    }
+function redirect(){
+
+
+
+window.location.href="loginhomepage.html"
+
+
+}
+
+
+
+
+
+
+
+
+
+</script>

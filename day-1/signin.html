@@ -64,6 +64,32 @@
             font-size: 20px;
            font-weight: 500;
         }
+
+
+        @media all and (min-width: 220px) and (max-width: 786px) {
+            .cont>div{
+                width: auto;
+            }
+            .cont>div>form>input{
+        height: 30px;
+        width: 300px;
+        }
+
+
+	
+}
+@media all and (min-width: 786px) and (max-width: 1350px) {
+            .cont>div{
+                width: auto;
+            }
+            .cont>div>form>input{
+        height: 30px;
+        width: 400px;
+        }
+
+
+	
+}
             </style>
 </head>
 <body>
@@ -104,7 +130,7 @@
 <script>
 
 
-let data=JSON.parse(localStorage.getItem("signup"))
+let data=JSON.parse(localStorage.getItem("signup"))||[]
 console.log(data)
 
 document.querySelector("form").addEventListener("submit",function(event){

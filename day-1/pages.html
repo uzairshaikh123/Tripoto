@@ -24,14 +24,14 @@ display: flex;
 }
 .nav>div{
     width: 50%;
-    border:2px solid red;
+    
     display: flex; 
     height: auto;
    
 }
 .nav>div:nth-child(1){
     width: 50%;
-    border:2px solid rgb(0, 255, 136);
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,12 +52,12 @@ width: 30px;
 .mid{
     width: 100%;
     height: auto;
-    border: 2px solid rgb(167, 249, 4);
+  
     margin-top: 30px;
 }
 #innermid{
     width: 70%;
-    border: 2px solid red;
+   
 height: auto;
 margin: auto;
 display: flex;
@@ -66,9 +66,9 @@ display: flex;
 #innermid>div:nth-child(1){
 
 
-    border: 12px solid rgb(101, 0, 243);
+   
     height: auto;
-    width: 65%;
+    width: 100%;
    
 }
 #innermid>div:nth-child(1)>p:nth-child(n){
@@ -91,10 +91,11 @@ font-family: sans-serif;
 #innermid>div:nth-child(2){
 
 
-border: 2px solid rgb(255, 162, 0);
+
 height: 800px;
 width: 35%;
 margin-left: 30px;
+background: white;
 }
 img{
     width: 100%;
@@ -121,7 +122,7 @@ height: auto;
 .bottomlast {
       width: 100%;
       height: 300px;
-      border: 2px solid rgb(240, 240, 240);
+      border: 2px solid rgb(193, 181, 181);
       display: flex;
       margin-top: 40px;
       justify-content: space-around;
@@ -136,7 +137,7 @@ height: auto;
     #div1{
 
 width: 20%;
-height: auto;
+height: 150px;
 
       
     }
@@ -144,7 +145,7 @@ height: auto;
       
       margin-top: 50px;
 width: 60%;
-height: 50%;
+height: 80%;
     }
     #div1:nth-child(2){
 font-size: 20px;
@@ -157,6 +158,22 @@ font-style:underline;
     height: 50%;
 
 }
+
+
+@media all and (min-width:299px) and (max-width:599px) {
+
+  .bottomlast{
+
+    flex-direction: column;
+    margin-top: 300px;
+
+  }.bottomlast>#div1{
+    margin-top: 300px;
+margin-bottom: 200px;
+width: 300px;
+  }
+  
+}
 </style>
 
 </head>
@@ -166,12 +183,7 @@ font-style:underline;
 
 <div>
     <img id="logo" src="https://cdn1.tripoto.com/assets/2.9/img/logo/tripoto.svg">
-    <div>
-        <form action="">
-<input type="text" name="" id="search" placeholder="Search for Iterneties , hotels and activities">
-<button id="sub" >sub</button>
-</form>
-    </div>
+   
 
 </div>
 
@@ -179,35 +191,7 @@ font-style:underline;
     <div >
      
      
-        <label style="background-color: transparent;">Inspiration</label>
-        <select name="Inspiration" id="Inspiration">
-          
-          <option  value=""></option>
-          <option value="Visit Singapore">Visit Singapore</option>
-          <option value="Beaches">Beaches</option>
-          <option value="Mountains">Mountains</option>
-          <option value="Heritage">Heritage</option>
-  
-          <option value="Weekend Guide">Weekend Guide</option>
-          <option value="Upcoming Festival">Upcoming Festival</option>
-          <option value="Honeymoon PAckeges">Honeymoon PAckeges</option>
-          <option value="Wildlife Tourism">Wildlife Tourism</option>
-          <option value="Road Trips">Road Trips</option>
-          <option value="GateWays Guide">GateWays Guide</option>
-          <option value="Luxury Travel">Luxury Travel</option>
-          <option value="Explore More">Explore More</option>
-        </select>
-     
-        <span>Forum</span>
-        <span>Packages</span>
-        <label for="Publish">Publish Trip</label>
-        <select name="Publish Trip" id="Publish">
-  
-          <option value="Create new">Create new</option>
-          <option value="Upload Photos/Videos">Upload Photos/Videos</option>
-          <option value="Import">Import</option>
-  
-        </select>
+        
        
   
       
@@ -232,12 +216,9 @@ font-style:underline;
 
 
 <div>
-    <p>These Gorgeous goSTOPS Hostels are Perfect for Those Looking To Celebrate a Green Diwali</p>
+    <h1>These Gorgeous goSTOPS Hostels are Perfect for Those Looking To Celebrate a Green Diwali</h1>
     <p>Imagine bringing in the festival of lights on a star-studded night, surrounded by lanterns and glimmering diyas. There are local pastries, chocolates and sweets to devour at a gorgeous new destination filled with family, both old and new.</p>
     <img src="https://cdn1.tripoto.com/media/filter/nl/img/1516992/Image/1666249977_pexels_ravi_roshan_5861723.jpg" alt="">
-</div>
-<div  style="background-color: #2f9bdb;"  class="end">
-    
 </div>
 
 
@@ -247,9 +228,7 @@ font-style:underline;
 <div class="bottomlast">
     
 </div>
-<p id="res" style="text-align: center ;margin-top:20px">
-    @All right reserved
-  </p>
+
 </body>
 </html>
 <script>

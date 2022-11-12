@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+          background: url("https://wallpaperaccess.com/full/4597139.jpg"); 
+           background-size: cover;
+        }
+        .cont{
+            
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .cont>div{
+            
+            width: 30%;
+            height: 400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.79);
+        opacity: 80%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        
+        }
+        .cont>div>form>input{
+        height: 30px;
+        width: 400px;
+        }
+        h1{
+            font-size: 40px;
+           text-align: center;
+           color: rgb(249, 244, 244);
+           background: rgb(16, 16, 16);
+           
+           
+        }
+        #submit{
+            color: white;
+            background-color: blue;
+            border: none;
+            height: 30px;
+            width: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        
+        form>label{
+            color: white;
+            font-size: 20px;
+           font-weight: 500;
+        }
+        h1{
+            text-align: center;
+        }
+        #name,#num{
+            height:40px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+        h2{
+        color: white;
+        }
+        #year,#month{
+            height: 30px;
+            width: 200px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+        }
+        @media all and (min-width: 220px) and (max-width: 786px) {
+            .cont>div{
+                width: auto;
+            }
+            .cont>div>form>input{
+        height: 30px;
+        width: 300px;
+        }
+
+
+	
+}
+@media all and (min-width: 786px) and (max-width: 1350px) {
+            .cont>div{
+                width: auto;
+            }
+            .cont>div>form>input{
+        height: 30px;
+        width: 300px;
+        }
+
+
+	
+}
+        
+        </style>
+</head>
+<body>
+    
+
+<h1>Enter Your Card Details here</h1>
+
+<div class="cont">
+
+
+<div>
+
+<h2>Card Details</h2>
+<form action="">
+
+<input type="text" name="" id="name" placeholder="Enter Name" maxlength="20">
+<input type="num" name="" id="num"  placeholder="Card number" maxlength="16">
+<label for=""></label>
+
+<select name="" id="year" aria-placeholder="Year of expiry">
+    <option value="">Month of expiry</option>
+<option value="January">January</option>
+<option value="February">February</option>
+<option value="March">March</option>
+<option value="April">April</option>
+<option value="May">May</option>
+<option value="June">June</option>
+<option value="July">July</option>
+<option value="August">August</option>
+<option value="September">September</option>
+<option value="October">October</option>
+<option value="November">November</option>
+<option value="December">December</option>
+
+
+</select>
+
+<select name="" id="month" aria-placeholder="Year of expiry">
+ <option value="">Year of expiry</option>
+<option value="2022">2022</option>
+<option value="2023">2023</option>
+<option value="2024">2024</option>
+<option value="2025">2025</option>
+<option value="2026">2026</option>
+<option value="2027">2027</option>
+<option value="2028">2028</option>
+<option value="2029">2029</option>
+<option value="2030">2030</option>
+
+
+</select>
+<input type="cvv" name="" id="cvv"  placeholder="CVV" maxlength="4"><br>
+<button type="submit" id="submit">Verify</button>
+
+
+</form>   
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+<script>
+
+
+document.querySelector("form").addEventListener("submit",details)
+
+
+function  details(event){
+event.preventDefault()
+
+let name=document.querySelector("#name").value
+
+let cardnum=document.querySelector("#num").value
+
+
+let expiryyear=document.querySelector("#year").value
+
+let expirymonth=document.querySelector("#month").value
+
+if(cardnum==""||expiryyear==""||expirymonth==""){
+alert("Please fill all the details")
+}else{
+
+
+let otp=Math.floor(Math.random()*10000)
+
+alert("otp is: "+otp)
+localStorage.setItem("OTP",JSON.stringify(otp))
+
+window.location.href="otp.html"
+
+
+
+
+}
+
+}
+
+
+</script>
