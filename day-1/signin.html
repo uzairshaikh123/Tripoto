@@ -141,7 +141,7 @@ let password=document.querySelector("#password").value
 if(email=="" || password==""){
     
 
-    alert("please fill the details")
+    alert("We have not found any details please signup")
     return
 }
 let flag=false
@@ -162,6 +162,7 @@ if(email==data[i].email && password==data[i].password){
 
 if(flag==true){
     alert("Signin Successful")
+    window.location.reload("signinpage")
       window.location.replace("loginhomepage.html")
 }else{
   
